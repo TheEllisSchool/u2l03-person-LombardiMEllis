@@ -33,8 +33,21 @@ public class Person {
 		g.drawLine(x, y + (height - 50)/2, x - 15, y + (height - 50)/2);
 		g.drawLine(x, y + (height - 50)/2, x + 15, y + (height - 50)/2);
 		
+		//hair
+		g.setColor(hairColor);
+		g.fillOval(x, y - 100, 100, 100);
+		g.setColor(Color.PINK);
+		g.fillOval(x, y - 80, 100, 100);
 		//head
+		g.setColor(Color.BLACK);
 		g.fillOval(x - 40, y - 100, 80, 100);
+		//eyes
+		g.setColor(eyeColor);
+		g.fillOval(x - 10, y - 50, 10, 10);
+		g.fillOval(x + 10, y - 50, 10, 10);
+		
+		
+		
 	}
 	
 	
