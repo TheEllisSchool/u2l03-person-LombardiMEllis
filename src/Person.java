@@ -20,6 +20,27 @@ public class Person {
 		x = xin;
 		y = yin;
 	}
+	
+	//set x
+	public void setX (int inx) {
+		if (inx > 0 && inx < 500) {
+			x = inx;
+		} else {
+			System.out.println("x out of bounds, x set to 10");
+			x = 10;
+		}	
+	}
+	
+	//get x
+	public int getX() {
+		return x;
+	}
+	
+	public void walk() {
+		int tempX = x;
+		tempX += 10;
+		setX(tempX);
+	}
 
 
 	public void show(Graphics g) {
@@ -47,7 +68,13 @@ public class Person {
 		g.fillOval(x + 10, y - 50, 10, 10);
 		
 		
-		
+	}
+	
+	//toString method (override method)
+	public String toString() {
+		String sentence = "Eye Color: " + eyeColor + "\nHair Color: " + hairColor
+				+ "\nHeight: " + height + "\nLocation: (" + x + ", " + y + ")";
+		return sentence;
 	}
 	
 	
